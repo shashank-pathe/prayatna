@@ -1,6 +1,6 @@
 import React from 'react'
 import "../styles/Navbar.css";
-import logo from "../assets/cara.png";
+import logo from "../assets/logo.png";
 import { useState } from 'react';
 import BestSellers from './BestSellers';
 import GiftSets from './GiftSets';
@@ -8,6 +8,7 @@ import Body from './Body';
 import { FaShoppingBag } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { BsCoin } from "react-icons/bs";
 
 const NavBar = () => {
     const [show, setShow] = useState(false);
@@ -66,12 +67,12 @@ const NavBar = () => {
                 <nav class="navbar" role="navigation" aria-label="menu">
 
                     <Link to="/">
-                        <img src={logo} className=" ml-32" />
+                        <img src={logo} className=" ml-32" width={250}/>
                     </Link>
 
                     <ul class="menuNav">
                         <li class="dropdown nav-link nav-link-fade-up transition-all duration-700" onMouseOver={showHandler} >
-                            BEST SELLERS
+                            ABOUT US
                             {show && <div>
                                 <ul class="dropdown-nav" onMouseLeave={dontShowHandler} >
 
@@ -85,7 +86,7 @@ const NavBar = () => {
 
 
                         <li class="dropdown nav-link nav-link-fade-up" onMouseOver={showHandler2} >
-                            GIFT SETS
+                            COUPONS & REWAEDS
                             {show2 && <ul class="dropdown-nav dropdown-nav2" onMouseLeave={dontShowHandler}>
                                 <GiftSets />
                             </ul>}
@@ -94,7 +95,14 @@ const NavBar = () => {
 
 
                         <li class="dropdown nav-link nav-link-fade-up" onMouseOver={showHandler3} >
-                            SHOP RANGE
+                            MY REVIEWS
+                            {show3 && <ul class="dropdown-nav dropdown-nav3" onMouseLeave={dontShowHandler}>
+                                <Body />
+                            </ul>}
+
+                        </li>
+                        <li class="dropdown nav-link nav-link-fade-up" onMouseOver={showHandler3} >
+                         POINTS< BsCoin />
                             {show3 && <ul class="dropdown-nav dropdown-nav3" onMouseLeave={dontShowHandler}>
                                 <Body />
                             </ul>}
@@ -102,7 +110,7 @@ const NavBar = () => {
                         </li>
 
 
-                        <p className='navLine absolute bg-red-600 w-1 font-extralight h-9 z-50'>  </p>
+                      <p className='navLine absolute bg-red-600 w-1 font-extralight h-9 z-50'>  </p>
 
                     </ul>
 

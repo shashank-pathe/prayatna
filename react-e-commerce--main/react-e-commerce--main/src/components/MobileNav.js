@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaShoppingBag } from "react-icons/fa";
-import logo from "../assets/cara.png";
+import logo from "../assets/logo.png";
 import "../styles/Navbar.css";
 import { Link } from 'react-router-dom';
 import { useState } from 'react';

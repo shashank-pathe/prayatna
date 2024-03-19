@@ -13,19 +13,27 @@
     left: 12.7rem;
     width: 85vw;
 }
+* {
+  box-sizing: border-box;
+}
+
 
 .heroHeadingHold{
-    position: relative;
-    left: 19rem;
-    gap: 15rem;
-    top: -5rem;
+  display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+  
 }
 
 .heroDescHold{
-    gap: 10.8rem;
-    left: 19rem;
-    top: -4rem;
-    font-size: 17px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  text-align: center;
+
+  
+  
 }
 
 
@@ -50,3 +58,18 @@
     background-color: #173f35;
     border-radius: 40px;
   }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+  }
+  
+  .section {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  
